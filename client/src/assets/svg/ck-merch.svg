@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="tshirtGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D2D2D" />
+      <stop offset="100%" stop-color="#1A1A1A" />
+    </linearGradient>
+  </defs>
+  
+  <!-- T-shirt body -->
+  <path d="M20,20 L40,10 L60,10 L80,20 L70,30 L70,80 L30,80 L30,30 Z" fill="url(#tshirtGradient)" />
+  
+  <!-- T-shirt collar -->
+  <path d="M40,10 L50,20 L60,10" fill="none" stroke="#CC0000" stroke-width="2" />
+  
+  <!-- T-shirt sleeves -->
+  <path d="M30,30 L15,40" fill="none" stroke="#CC0000" stroke-width="2" />
+  <path d="M70,30 L85,40" fill="none" stroke="#CC0000" stroke-width="2" />
+  
+  <!-- CK logo on shirt -->
+  <text x="50" y="50" font-family="Bebas Neue" font-size="22" fill="#CC0000" text-anchor="middle" font-weight="bold">CK</text>
+  
+  <text x="50" y="70" font-family="Arial" font-size="7" font-weight="bold" fill="#FFF" text-anchor="middle">COUNTS KUSTOMS</text>
+</svg>

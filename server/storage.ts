@@ -62,7 +62,7 @@ export class MemStorage implements IStorage {
     this.createGiftBox({
       name: "Gold Box",
       type: BoxType.GOLD,
-      description: "$PEPE + NFT",
+      description: "Cash & NFT Prizes",
       image: "/src/assets/svg/gift-box-gold.svg",
       isPremium: true,
     });
@@ -71,7 +71,7 @@ export class MemStorage implements IStorage {
     this.createGiftBox({
       name: "Silver Box",
       type: BoxType.SILVER,
-      description: "$PEPE Tokens",
+      description: "Cash & Merchandise",
       image: "/src/assets/svg/gift-box-silver.svg",
       isPremium: false,
     });
@@ -80,9 +80,36 @@ export class MemStorage implements IStorage {
     this.createGiftBox({
       name: "Bronze Box",
       type: BoxType.BRONZE,
-      description: "Pepe Merch",
+      description: "Collectibles & Merch",
       image: "/src/assets/svg/gift-box-bronze.svg",
       isPremium: false,
+    });
+    
+    // Chrome box
+    this.createGiftBox({
+      name: "Chrome Box",
+      type: BoxType.CHROME,
+      description: "Premium Car Parts",
+      image: "/src/assets/svg/gift-box-chrome.svg",
+      isPremium: true,
+    });
+    
+    // Flames box
+    this.createGiftBox({
+      name: "Flames Box",
+      type: BoxType.FLAMES,
+      description: "Custom Paint Jobs",
+      image: "/src/assets/svg/gift-box-flames.svg",
+      isPremium: true,
+    });
+    
+    // Custom box
+    this.createGiftBox({
+      name: "Custom Box",
+      type: BoxType.CUSTOM,
+      description: "VIP Experiences",
+      image: "/src/assets/svg/gift-box-custom.svg",
+      isPremium: true,
     });
   }
 
@@ -302,6 +329,33 @@ export class MemStorage implements IStorage {
       case BoxType.BRONZE:
         // Bronze boxes can yield rare prizes
         eligiblePrizes = await this.getPrizesByTier(PrizeTier.RARE);
+        break;
+      case BoxType.CHROME:
+        // Chrome boxes can yield legendary or epic prizes
+        const chromePrizes = [
+          ...(await this.getPrizesByTier(PrizeTier.LEGENDARY)),
+          ...(await this.getPrizesByTier(PrizeTier.EPIC))
+        ];
+        eligiblePrizes = chromePrizes;
+        break;
+      case BoxType.FLAMES:
+        // Flames boxes can yield epic prizes with higher chance of legendary
+        const flamesPrizes = [
+          ...(await this.getPrizesByTier(PrizeTier.LEGENDARY)),
+          ...(await this.getPrizesByTier(PrizeTier.LEGENDARY)),
+          ...(await this.getPrizesByTier(PrizeTier.EPIC))
+        ];
+        eligiblePrizes = flamesPrizes;
+        break;
+      case BoxType.CUSTOM:
+        // Custom boxes can yield any prize with higher chance of legendary
+        const customPrizes = [
+          ...(await this.getPrizesByTier(PrizeTier.LEGENDARY)),
+          ...(await this.getPrizesByTier(PrizeTier.LEGENDARY)),
+          ...(await this.getPrizesByTier(PrizeTier.EPIC)),
+          ...(await this.getPrizesByTier(PrizeTier.RARE))
+        ];
+        eligiblePrizes = customPrizes;
         break;
       default:
         return undefined;

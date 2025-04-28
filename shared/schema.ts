@@ -88,6 +88,9 @@ export enum BoxType {
   GOLD = "GOLD",
   SILVER = "SILVER",
   BRONZE = "BRONZE",
+  CHROME = "CHROME",
+  FLAMES = "FLAMES",
+  CUSTOM = "CUSTOM",
 }
 
 // Prize tiers
@@ -100,9 +103,10 @@ export enum PrizeTier {
 // Prize types
 export enum PrizeType {
   NFT = "NFT",
-  TOKEN = "TOKEN",
+  CASH = "CASH",
   MERCH = "MERCH",
-  CALL = "CALL",
-  ROLE = "ROLE",
+  CARPART = "CARPART",
+  TOUR = "TOUR",
   ART = "ART",
+  EXPERIENCE = "EXPERIENCE",
 }
