@@ -12,7 +12,8 @@ import {
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { formatWalletAddress } from "@/lib/utils";
-import countsLogoSrc from "@/assets/svg/counts-logo.svg";
+import countsMainLogoSrc from "@/assets/images/counts-main-logo.png";
+import countsFlameLogoSrc from "@/assets/images/counts-flame-logo.png";
 
 export default function CountsHeader() {
   const [isConnectOpen, setIsConnectOpen] = useState(false);
@@ -62,14 +63,21 @@ export default function CountsHeader() {
   return (
     <header className="bg-counts-black py-4 px-4 md:px-8 border-b border-counts-red/30">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <img 
-            src={countsLogoSrc} 
-            alt="Counts Kustoms" 
-            className="h-12 md:h-16"
-          />
-          <div className="ml-3 border-l-2 border-counts-red pl-3">
-            <h1 className="text-xl md:text-2xl font-bold font-bebasNeue text-counts-red">
+        <div className="flex flex-col items-center md:flex-row">
+          <div className="flex flex-col items-center md:items-start">
+            <img 
+              src={countsMainLogoSrc} 
+              alt="Counts Kustoms" 
+              className="h-16 md:h-20 mb-2 md:mb-0"
+            />
+            <img 
+              src={countsFlameLogoSrc} 
+              alt="Counts Kustoms Flames" 
+              className="h-8 md:h-10 mt-1 md:mt-0"
+            />
+          </div>
+          <div className="ml-0 md:ml-4 mt-2 md:mt-0 border-t-2 md:border-t-0 md:border-l-2 border-counts-gold pt-2 md:pt-0 md:pl-4 flex flex-col items-center md:items-start">
+            <h1 className="text-xl md:text-2xl font-bold font-bebasNeue text-counts-gold">
               GIVEAWAY
             </h1>
             <p className="text-xs text-counts-silver mt-0.5 font-bebasNeue">BY DANNY KOKER</p>

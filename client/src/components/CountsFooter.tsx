@@ -1,54 +1,60 @@
-import { Link } from "wouter";
+import { Twitter, Instagram, Youtube, Facebook } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import countsMainLogoSrc from "@/assets/images/counts-main-logo.png";
+import countsFlameLogoSrc from "@/assets/images/counts-flame-logo.png";
 
 export default function CountsFooter() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-black text-white py-8 border-t border-[#cc0000]/20">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bebasNeue text-[#cc0000] mb-4">COUNTS KUSTOMS</h3>
-            <p className="text-gray-400 text-sm">
-              The official giveaway platform by Danny Koker. Win exclusive car parts, 
-              merchandise, custom work, and more!
-            </p>
+    <footer className="bg-counts-black py-8 px-4 border-t border-counts-red/30">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+          <div className="flex items-center mb-6 md:mb-0">
+            <div className="flex flex-col items-center mr-3">
+              <img 
+                src={countsMainLogoSrc} 
+                alt="Counts Kustoms Logo" 
+                className="h-10 mb-1" 
+              />
+              <img 
+                src={countsFlameLogoSrc} 
+                alt="Counts Kustoms Flames" 
+                className="h-6" 
+              />
+            </div>
+            <div>
+              <h2 className="font-bebasNeue text-xl text-white">
+                <span className="text-counts-gold">GIVEAWAY</span> by Danny Koker
+              </h2>
+              <p className="text-xs text-counts-silver">Las Vegas, Nevada</p>
+            </div>
           </div>
-          
-          <div>
-            <h4 className="text-lg font-bebasNeue text-[#cc0000] mb-4">LINKS</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><Link href="/" className="hover:text-[#cc0000] transition-colors">Home</Link></li>
-              <li><a href="#prizes" className="hover:text-[#cc0000] transition-colors">Prizes</a></li>
-              <li><a href="#how-it-works" className="hover:text-[#cc0000] transition-colors">How It Works</a></li>
-              <li><a href="#winners" className="hover:text-[#cc0000] transition-colors">Winners</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-bebasNeue text-[#cc0000] mb-4">CONNECT</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-[#cc0000] transition-colors">Facebook</a></li>
-              <li><a href="#" className="hover:text-[#cc0000] transition-colors">Twitter</a></li>
-              <li><a href="#" className="hover:text-[#cc0000] transition-colors">Instagram</a></li>
-              <li><a href="#" className="hover:text-[#cc0000] transition-colors">YouTube</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-bebasNeue text-[#cc0000] mb-4">LEGAL</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-[#cc0000] transition-colors">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-[#cc0000] transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-[#cc0000] transition-colors">Giveaway Rules</a></li>
-              <li><a href="#" className="hover:text-[#cc0000] transition-colors">Contact Us</a></li>
-            </ul>
+          <div className="flex space-x-6">
+            <a href="#" className="text-counts-silver hover:text-counts-red transition-colors">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-counts-silver hover:text-counts-red transition-colors">
+              <Twitter className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-counts-silver hover:text-counts-red transition-colors">
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-counts-silver hover:text-counts-red transition-colors">
+              <Youtube className="h-5 w-5" />
+            </a>
           </div>
         </div>
         
-        <div className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-500 text-sm">
-          <p>© {currentYear} Counts Kustoms Giveaway by Danny Koker. All rights reserved.</p>
-          <p className="mt-2">Las Vegas, Nevada</p>
+        <Separator className="bg-counts-grey my-6" />
+        
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <p className="text-counts-silver text-sm mb-4 md:mb-0">© {currentYear} Counts Kustoms Giveaway by Danny Koker. All rights reserved.</p>
+          <div className="flex space-x-6">
+            <a href="#" className="text-counts-silver hover:text-counts-red transition-colors text-sm">Terms & Conditions</a>
+            <a href="#" className="text-counts-silver hover:text-counts-red transition-colors text-sm">Privacy Policy</a>
+            <a href="#" className="text-counts-silver hover:text-counts-red transition-colors text-sm">FAQ</a>
+          </div>
         </div>
       </div>
     </footer>
