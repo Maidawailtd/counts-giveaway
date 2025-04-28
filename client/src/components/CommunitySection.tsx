@@ -11,7 +11,7 @@ export default function CommunitySection() {
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !email.includes('@')) {
       toast({
         title: "Invalid Email",
@@ -20,21 +20,21 @@ export default function CommunitySection() {
       });
       return;
     }
-    
+
     toast({
       title: "Subscribed!",
       description: "You've been subscribed to exclusive drops",
     });
-    
+
     setEmail("");
   };
 
   return (
-    <section className="py-12 px-4 bg-pepeBg">
+    <section id="community" className="py-12 px-4 bg-pepeBg scroll-mt-20">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 text-pepeGold">Join the Pepe Community</h2>
         <p className="max-w-2xl mx-auto mb-8 text-gray-300">Connect with fellow Pepe enthusiasts, share your wins, and stay updated on upcoming giveaways and events!</p>
-        
+
         <div className="flex flex-wrap justify-center gap-4">
           <Button 
             className="flex items-center bg-[#1DA1F2] hover:bg-opacity-80 px-5 py-6 h-12 rounded-lg font-medium transition-all"
@@ -55,7 +55,7 @@ export default function CommunitySection() {
             <Github className="mr-2 h-5 w-5" /> Discord
           </Button>
         </div>
-        
+
         <div className="mt-12 max-w-4xl mx-auto">
           <Card className="bg-pepeDark/50 rounded-xl p-6 border border-pepeGreen/20">
             <CardContent className="p-0">

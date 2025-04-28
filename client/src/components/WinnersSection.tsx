@@ -16,7 +16,7 @@ export default function WinnersSection() {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-b from-pepeBg to-pepeDark px-4">
+    <section id="winners" className="py-12 bg-gradient-to-b from-pepeBg to-pepeDark px-4">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-poppins font-bold text-center mb-10 text-pepeGold flex items-center justify-center">
           <Trophy className="mr-2 h-8 w-8" /> Recent Winners

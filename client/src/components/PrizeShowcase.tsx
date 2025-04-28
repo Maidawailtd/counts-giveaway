@@ -49,11 +49,11 @@ export default function PrizeShowcase() {
   };
 
   return (
-    <section className="py-12 px-4 bg-pepeBg">
+    <section id="prizes" className="py-12 px-4 bg-pepeBg scroll-mt-20">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-poppins font-bold text-center mb-4 text-pepeGold">Prize Showcase 💎</h2>
         <p className="text-center max-w-3xl mx-auto mb-10 text-gray-300">Discover the exciting prizes waiting for you inside the Pepe Millonario mystery boxes!</p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Legendary Prizes */}
           <Card className="bg-gradient-to-br from-pepeDark to-pepeDark/70 rounded-xl overflow-hidden border border-pepeGold/20">
@@ -67,7 +67,7 @@ export default function PrizeShowcase() {
               {renderPrizeGrid(legendaryPrizes)}
             </CardContent>
           </Card>
-          
+
           {/* Epic Prizes */}
           <Card className="bg-gradient-to-br from-pepeDark to-pepeDark/70 rounded-xl overflow-hidden border border-zinc-400/20">
             <CardHeader className={cn(
@@ -80,7 +80,7 @@ export default function PrizeShowcase() {
               {renderPrizeGrid(epicPrizes)}
             </CardContent>
           </Card>
-          
+
           {/* Rare Prizes */}
           <Card className="bg-gradient-to-br from-pepeDark to-pepeDark/70 rounded-xl overflow-hidden border border-amber-700/20">
             <CardHeader className={cn(

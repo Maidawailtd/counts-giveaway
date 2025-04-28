@@ -82,6 +82,12 @@ export default function CountsHeader() {
             </h1>
             <p className="text-xs text-counts-silver mt-0.5 font-bebasNeue">BY DANNY KOKER</p>
           </div>
+          <nav className="hidden md:flex ml-8 space-x-6">
+            <a href="#prizes" className="text-counts-silver hover:text-counts-gold transition-colors">Prizes</a>
+            <a href="#winners" className="text-counts-silver hover:text-counts-gold transition-colors">Winners</a>
+            <a href="#how-it-works" className="text-counts-silver hover:text-counts-gold transition-colors">How It Works</a>
+            <a href="#community" className="text-counts-silver hover:text-counts-gold transition-colors">Community</a>
+          </nav>
         </div>
         
         <div className="flex items-center gap-4">
