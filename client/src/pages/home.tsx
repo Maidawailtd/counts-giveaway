@@ -12,7 +12,7 @@ export default function Home() {
   const { selectedBox } = useGiveaway();
   
   return (
-    <div className="min-h-screen bg-countsBg text-white">
+    <div className="min-h-screen bg-counts-black text-white">
       <CountsHeader />
       <HeroSection />
       <WinnersSection />
