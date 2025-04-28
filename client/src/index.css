@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Pepe colors */
+  --pepe-green: 108 48% 50%;
+  --pepe-gold: 50 100% 50%;
+  --pepe-red: 0 100% 70%;
+  --pepe-dark: 0 0% 18%;
+  --pepe-bg: 0 0% 10%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-pepeBg text-foreground;
+  }
+}
+
+@layer components {
+  .shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(30deg);
+    animation: shine 4s infinite;
+  }
+  
+  .gift-box {
+    transition: all 0.3s;
+  }
+  .gift-box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+  }
+  
+  .opening-animation {
+    animation: openBox 1s forwards;
+  }
+}
+
+@layer utilities {
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .bg-pepeBg {
+    background-color: hsl(var(--pepe-bg));
+  }
+  
+  .bg-pepeDark {
+    background-color: hsl(var(--pepe-dark));
+  }
+  
+  .bg-pepeGreen {
+    background-color: hsl(var(--pepe-green));
+  }
+  
+  .bg-pepeGold {
+    background-color: hsl(var(--pepe-gold));
+  }
+  
+  .text-pepeGreen {
+    color: hsl(var(--pepe-green));
+  }
+  
+  .text-pepeGold {
+    color: hsl(var(--pepe-gold));
+  }
+  
+  .text-pepeDark {
+    color: hsl(var(--pepe-dark));
+  }
+  
+  .border-pepeGreen {
+    border-color: hsl(var(--pepe-green));
+  }
+  
+  .border-pepeGold {
+    border-color: hsl(var(--pepe-gold));
+  }
+}
+
+@keyframes shine {
+  0% {transform: scale(0) rotate(30deg); opacity: 0;}
+  50% {transform: scale(1) rotate(30deg); opacity: 1;}
+  100% {transform: scale(2) rotate(30deg); opacity: 0;}
+}
+
+@keyframes openBox {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

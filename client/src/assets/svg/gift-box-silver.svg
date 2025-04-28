@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C0C0C0" />
+      <stop offset="100%" stop-color="#A0A0A0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Box base -->
+  <rect x="15" y="40" width="70" height="55" rx="5" fill="url(#silverGradient)" />
+  
+  <!-- Box lid -->
+  <rect x="10" y="30" width="80" height="15" rx="3" fill="#D6D6D6" />
+  
+  <!-- Ribbon vertical -->
+  <rect x="45" y="5" width="10" height="90" fill="#5ABE42" />
+  
+  <!-- Ribbon horizontal -->
+  <rect x="15" y="40" width="70" height="10" fill="#5ABE42" />
+  
+  <!-- Ribbon bow left -->
+  <path d="M45,15 Q35,5 30,15 Q25,25 35,25 Q45,25 45,15" fill="#5ABE42" />
+  
+  <!-- Ribbon bow right -->
+  <path d="M55,15 Q65,5 70,15 Q75,25 65,25 Q55,25 55,15" fill="#5ABE42" />
+  
+  <!-- Pepe symbol -->
+  <text x="50" y="75" font-family="Arial" font-size="20" font-weight="bold" fill="#2D2D2D" text-anchor="middle">PEPE</text>
+</svg>

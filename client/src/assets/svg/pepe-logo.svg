@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <circle cx="50" cy="50" r="48" fill="#1A1A1A" stroke="#5ABE42" stroke-width="2" />
+  <g transform="translate(20, 15)">
+    <!-- Pepe face -->
+    <ellipse cx="30" cy="35" rx="30" ry="35" fill="#5ABE42" />
+    <!-- Eyes -->
+    <ellipse cx="20" cy="25" rx="7" ry="10" fill="#FFF" />
+    <ellipse cx="40" cy="25" rx="7" ry="10" fill="#FFF" />
+    <circle cx="20" cy="27" r="4" fill="#000" />
+    <circle cx="40" cy="27" r="4" fill="#000" />
+    <!-- Mouth -->
+    <path d="M15,45 Q30,55 45,45" fill="none" stroke="#2D2D2D" stroke-width="2" />
+    <!-- Dollar sign crown -->
+    <text x="30" y="15" font-family="Arial" font-size="20" fill="#FFD700" text-anchor="middle">$</text>
+  </g>
+</svg>
