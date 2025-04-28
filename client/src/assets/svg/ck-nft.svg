@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="nftBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CC0000" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#CC0000" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#888888" />
+      <stop offset="50%" stop-color="#DDDDDD" />
+      <stop offset="100%" stop-color="#888888" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="100" height="100" rx="10" fill="url(#nftBg)" />
+  
+  <!-- NFT frame -->
+  <rect x="10" y="10" width="80" height="80" rx="5" fill="#2D2D2D" stroke="url(#metalGradient)" stroke-width="3" />
+  
+  <!-- Car silhouette NFT -->
+  <path d="M20,60 L30,60 L35,45 L65,45 L70,60 L80,60 L80,75 L20,75 Z" fill="#CC0000" />
+  <circle cx="35" cy="75" r="6" fill="#333333" stroke="#AAAAAA" stroke-width="2" />
+  <circle cx="65" cy="75" r="6" fill="#333333" stroke="#AAAAAA" stroke-width="2" />
+  
+  <!-- Car details -->
+  <rect x="40" y="52" width="20" height="8" fill="#444444" stroke="#AAAAAA" stroke-width="1" />
+  <path d="M25,60 L35,60 Q30,65 25,65 Z" fill="#AAAAAA" />
+  <path d="M75,60 L65,60 Q70,65 75,65 Z" fill="#AAAAAA" />
+  
+  <!-- Car roof line -->
+  <path d="M35,45 Q50,30 65,45" fill="none" stroke="#AAAAAA" stroke-width="1" />
+  
+  <!-- NFT Badge -->
+  <circle cx="80" cy="20" r="12" fill="#333333" stroke="url(#metalGradient)" stroke-width="2" />
+  <text x="80" y="24" font-family="Arial" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">NFT</text>
+</svg>

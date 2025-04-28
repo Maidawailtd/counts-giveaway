@@ -116,113 +116,113 @@ export class MemStorage implements IStorage {
   private initializePrizes() {
     // Legendary prizes
     this.createPrize({
-      name: "Rare Pepe NFT",
-      description: "A limited edition Pepe NFT worth ~$1000",
+      name: "Custom Car NFT",
+      description: "A limited edition Counts Kustoms car NFT",
       type: PrizeType.NFT,
       tier: PrizeTier.LEGENDARY,
-      image: "/src/assets/svg/pepe-nft.svg",
+      image: "/src/assets/svg/ck-nft.svg",
       value: "~$1000",
     });
 
     this.createPrize({
-      name: "1M $PEPE",
-      description: "One million Pepe tokens",
-      type: PrizeType.TOKEN,
+      name: "$5000 Cash",
+      description: "Cash prize of $5000",
+      type: PrizeType.CASH,
       tier: PrizeTier.LEGENDARY,
-      image: "/src/assets/svg/pepe-token.svg",
-      value: "1,000,000 $PEPE",
+      image: "/src/assets/svg/ck-cash.svg",
+      value: "$5000",
     });
 
     this.createPrize({
-      name: "Signed Merch",
-      description: "Exclusive signed merchandise from the Pepe Millonario team",
-      type: PrizeType.MERCH,
+      name: "Custom Paint Job",
+      description: "A custom paint job on your car by the Counts Kustoms team",
+      type: PrizeType.EXPERIENCE,
       tier: PrizeTier.LEGENDARY,
-      image: "/src/assets/svg/pepe-merch.svg",
-      value: "Limited Edition",
+      image: "/src/assets/svg/ck-experience.svg",
+      value: "Custom Work",
     });
 
     this.createPrize({
-      name: "1:1 Call",
-      description: "Private call with the Pepe Millonario founder",
-      type: PrizeType.CALL,
+      name: "VIP Shop Tour",
+      description: "Private tour of Counts Kustoms shop with Danny",
+      type: PrizeType.TOUR,
       tier: PrizeTier.LEGENDARY,
-      image: "/src/assets/svg/pepe-merch.svg",
-      value: "With Founder",
+      image: "/src/assets/svg/ck-tour.svg",
+      value: "With Danny",
     });
 
     // Epic prizes
     this.createPrize({
-      name: "Pepe Hoodie",
-      description: "Premium Pepe Millonario hoodie",
+      name: "CK Leather Jacket",
+      description: "Premium Counts Kustoms leather jacket",
       type: PrizeType.MERCH,
       tier: PrizeTier.EPIC,
-      image: "/src/assets/svg/pepe-merch.svg",
+      image: "/src/assets/svg/ck-merch.svg",
       value: "Premium Merch",
     });
 
     this.createPrize({
-      name: "250K $PEPE",
-      description: "250,000 Pepe tokens",
-      type: PrizeType.TOKEN,
+      name: "$1000 Cash",
+      description: "Cash prize of $1000",
+      type: PrizeType.CASH,
       tier: PrizeTier.EPIC,
-      image: "/src/assets/svg/pepe-token.svg",
-      value: "250,000 $PEPE",
+      image: "/src/assets/svg/ck-cash.svg",
+      value: "$1000",
     });
 
     this.createPrize({
-      name: "WL Access",
-      description: "Whitelist access to next NFT drop",
-      type: PrizeType.NFT,
+      name: "Custom Rims",
+      description: "Set of custom rims for your car",
+      type: PrizeType.CARPART,
       tier: PrizeTier.EPIC,
-      image: "/src/assets/svg/pepe-nft.svg",
-      value: "Next NFT Drop",
+      image: "/src/assets/svg/ck-carpart.svg",
+      value: "Custom Rims",
     });
 
     this.createPrize({
-      name: "Discord Role",
-      description: "VIP access to exclusive Discord channels",
-      type: PrizeType.ROLE,
+      name: "Group Shop Tour",
+      description: "Join a small group tour of the Counts Kustoms shop",
+      type: PrizeType.TOUR,
       tier: PrizeTier.EPIC,
-      image: "/src/assets/svg/pepe-merch.svg",
-      value: "VIP Access",
+      image: "/src/assets/svg/ck-tour.svg",
+      value: "Group Tour",
     });
 
     // Rare prizes
     this.createPrize({
-      name: "50K $PEPE",
-      description: "50,000 Pepe tokens",
-      type: PrizeType.TOKEN,
+      name: "$250 Cash",
+      description: "Cash prize of $250",
+      type: PrizeType.CASH,
       tier: PrizeTier.RARE,
-      image: "/src/assets/svg/pepe-token.svg",
-      value: "50,000 $PEPE",
+      image: "/src/assets/svg/ck-cash.svg",
+      value: "$250",
     });
 
     this.createPrize({
-      name: "Pepe Cap",
-      description: "Stylish Pepe Millonario cap",
+      name: "CK Cap & T-Shirt",
+      description: "Stylish Counts Kustoms cap and t-shirt",
       type: PrizeType.MERCH,
       tier: PrizeTier.RARE,
-      image: "/src/assets/svg/pepe-merch.svg",
+      image: "/src/assets/svg/ck-merch.svg",
       value: "Stylish Merch",
     });
 
     this.createPrize({
-      name: "Stickers",
-      description: "Set of collectible Pepe stickers",
+      name: "Decal Set",
+      description: "Set of collectible Counts Kustoms decals",
       type: PrizeType.MERCH,
       tier: PrizeTier.RARE,
-      image: "/src/assets/svg/pepe-merch.svg",
+      image: "/src/assets/svg/ck-merch.svg",
       value: "Collectible Set",
     });
 
     this.createPrize({
-      name: "Digital Art",
-      description: "Exclusive Pepe digital art wallpapers",
+      name: "Custom Artwork",
+      description: "Exclusive Counts Kustoms digital artwork",
       type: PrizeType.ART,
       tier: PrizeTier.RARE,
-      image: "/src/assets/svg/pepe-nft.svg",
-      value: "Exclusive Design",
+      image: "/src/assets/svg/ck-art.svg",
+      value: "Digital Artwork",
     });
   }
 

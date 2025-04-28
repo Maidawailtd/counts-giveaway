@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000066" />
+      <stop offset="100%" stop-color="#003399" />
+    </linearGradient>
+    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#333333" />
+      <stop offset="100%" stop-color="#222222" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="100" height="100" fill="url(#skyGradient)" />
+  
+  <!-- Road -->
+  <rect x="0" y="70" width="100" height="30" fill="url(#roadGradient)" />
+  <rect x="0" y="80" width="100" height="5" fill="#111111" />
+  
+  <!-- Road markings -->
+  <rect x="10" y="83" width="15" height="2" fill="#FFFFFF" />
+  <rect x="40" y="83" width="15" height="2" fill="#FFFFFF" />
+  <rect x="70" y="83" width="15" height="2" fill="#FFFFFF" />
+  
+  <!-- Car silhouette -->
+  <path d="M60,70 L80,70 L75,60 L65,60 Z" fill="#CC0000" />
+  <rect x="63" y="63" width="10" height="5" fill="#DDDDDD" />
+  <circle cx="65" cy="70" r="3" fill="#111111" />
+  <circle cx="75" cy="70" r="3" fill="#111111" />
+  
+  <!-- VIP banner -->
+  <rect x="20" y="20" width="60" height="15" rx="5" fill="#CC0000" />
+  <text x="50" y="32" font-family="Bebas Neue" font-size="12" fill="#FFFFFF" text-anchor="middle">VIP EXPERIENCE</text>
+  
+  <!-- Stars for VIP effect -->
+  <polygon points="20,45 22,50 18,50" fill="#FFCC00" />
+  <polygon points="30,40 32,45 28,45" fill="#FFCC00" />
+  <polygon points="40,50 42,55 38,55" fill="#FFCC00" />
+  <polygon points="60,45 62,50 58,50" fill="#FFCC00" />
+  <polygon points="70,55 72,60 68,60" fill="#FFCC00" />
+  <polygon points="80,40 82,45 78,45" fill="#FFCC00" />
+</svg>
