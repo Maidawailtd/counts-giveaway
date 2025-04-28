@@ -309,7 +309,40 @@ export class MemStorage implements IStorage {
   }
 
   async getRecentWinners(limit = 10): Promise<Winner[]> {
-    return Array.from(this.winners.values())
+    const templateWinners: Winner[] = [
+      {
+        id: 1,
+        userId: 1,
+        prizeId: 1,
+        boxType: "GOLD",
+        timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
+        walletAddress: "0x1234...5678",
+        username: "CountsFan123"
+      },
+      {
+        id: 2,
+        userId: 2,
+        prizeId: 2,
+        boxType: "SILVER",
+        timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
+        walletAddress: "0x8765...4321",
+        username: "PepeCollector"
+      },
+      {
+        id: 3,
+        userId: 3,
+        prizeId: 3,
+        boxType: "BRONZE",
+        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
+        walletAddress: "0x9876...1234",
+        username: "CustomsLover"
+      }
+    ];
+
+    const actualWinners = Array.from(this.winners.values());
+    const allWinners = [...actualWinners, ...templateWinners];
+    
+    return allWinners
       .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime())
       .slice(0, limit);
   }
