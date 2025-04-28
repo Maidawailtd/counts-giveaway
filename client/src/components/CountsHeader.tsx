@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { formatWalletAddress } from "@/lib/utils";
-import CountsHeader from "@/assets/svg/counts-logo.svg";
+import countsLogoSrc from "@/assets/svg/counts-logo.svg";
 
 export default function CountsHeader() {
   const [isConnectOpen, setIsConnectOpen] = useState(false);
@@ -64,7 +64,7 @@ export default function CountsHeader() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img 
-            src={CountsHeader} 
+            src={countsLogoSrc} 
             alt="Counts Kustoms" 
             className="h-12 md:h-16"
           />
