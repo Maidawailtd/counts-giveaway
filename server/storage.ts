@@ -208,11 +208,11 @@ export class MemStorage implements IStorage {
     });
 
     this.createPrize({
-      name: "Decal Set",
-      description: "Set of collectible Counts Kustoms decals",
+      name: "Truck Decal Set",
+      description: "Set of collectible Counts Kustoms truck decals & stickers",
       type: PrizeType.MERCH,
       tier: PrizeTier.RARE,
-      image: "/src/assets/svg/ck-merch.svg",
+      image: "/src/assets/images/prizes/truck-decals.svg",
       value: "Collectible Set",
     });
 
