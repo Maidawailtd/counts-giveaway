@@ -3,7 +3,17 @@ import { useGiveaway } from "@/context/GiveawayContext";
 import { cn } from "@/lib/utils";
 
 export default function PrizeShowcase() {
-  const { legendaryPrizes, epicPrizes, rarePrizes } = useGiveaway();
+  const { legendaryPrizes, epicPrizes, rarePrizes, isLoading } = useGiveaway();
+
+  if (isLoading) {
+    return (
+      <section className="py-12 px-4 bg-pepeBg">
+        <div className="container mx-auto text-center">
+          <div className="animate-pulse">Loading prizes...</div>
+        </div>
+      </section>
+    );
+  }
 
   // Function to render prize items in a grid
   const renderPrizeGrid = (prizes: any[]) => {

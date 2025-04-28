@@ -73,6 +73,12 @@ export function GiveawayProvider({ children }: { children: ReactNode }) {
       setGiftBoxes(data);
     } catch (error) {
       console.error("Error fetching gift boxes:", error);
+      setGiftBoxes([]);
+      toast({
+        title: "Error",
+        description: "Failed to load gift boxes. Please refresh the page.",
+        variant: "destructive",
+      });
       toast({
         title: "Error",
         description: "Failed to load gift boxes. Please try again.",

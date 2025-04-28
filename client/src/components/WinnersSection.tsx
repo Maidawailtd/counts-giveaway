@@ -21,7 +21,7 @@ export default function WinnersSection() {
         <h2 className="text-3xl md:text-4xl font-poppins font-bold text-center mb-10 text-pepeGold flex items-center justify-center">
           <Trophy className="mr-2 h-8 w-8" /> Recent Winners
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {recentWinners.length > 0 ? (
             recentWinners.slice(0, 6).map((winner) => (
@@ -61,8 +61,11 @@ export default function WinnersSection() {
                       )}
                     </div>
                     <div>
-                      <p className="font-medium">Won <span className="text-pepeGold">{winner.prizeId}</span></p>
+                      <p className="font-medium">Won <span className="text-pepeGold">{winner.prize?.name || `Prize #${winner.prizeId}`}</span></p>
                       <p className="text-sm text-gray-400">From {winner.boxType.charAt(0) + winner.boxType.slice(1).toLowerCase()} Box</p>
+                      {winner.prize?.value && (
+                        <p className="text-xs text-pepeGold mt-1">Value: {winner.prize.value}</p>
+                      )}
                     </div>
                   </div>
                 </CardContent>
@@ -74,7 +77,7 @@ export default function WinnersSection() {
             </div>
           )}
         </div>
-        
+
         {recentWinners.length > 6 && (
           <div className="text-center mt-10">
             <Button 
