@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Truck Decals</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#222222" x="0" y="0" width="200" height="200" rx="8"></rect>
+        
+        <!-- Decal Sheet Background -->
+        <rect x="40" y="40" width="120" height="120" rx="4" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"></rect>
+        
+        <!-- Truck Silhouette Decal -->
+        <path d="M60,80 L70,70 L100,70 L110,80 L130,80 L130,95 L60,95 Z" fill="#333333"></path>
+        <circle cx="75" cy="95" r="8" fill="#444444"></circle>
+        <circle cx="115" cy="95" r="8" fill="#444444"></circle>
+        
+        <!-- Flames Decal -->
+        <path d="M60,110 C65,105 70,110 75,105 C80,100 85,110 90,105 C95,100 100,110 105,105 C110,100 115,110 120,105 C125,100 130,110 135,105 L135,115 L60,115 Z" fill="#cc0000"></path>
+        
+        <!-- Chrome Skull Decal -->
+        <circle cx="100" cy="140" r="15" fill="#BBBBBB"></circle>
+        <circle cx="95" cy="135" r="3" fill="#333333"></circle>
+        <circle cx="105" cy="135" r="3" fill="#333333"></circle>
+        <path d="M95,145 C95,150 105,150 105,145" stroke="#333333" stroke-width="2" fill="none"></path>
+        
+        <!-- Logo Decal -->
+        <rect x="70" y="50" width="60" height="15" rx="2" fill="#cc0000"></rect>
+        <text font-family="Arial" font-size="10" font-weight="bold" fill="#FFFFFF">
+            <tspan x="75" y="61">COUNTS</tspan>
+        </text>
+        
+        <!-- Text labels -->
+        <text font-family="Arial" font-size="12" font-weight="bold" fill="#f5a623">
+            <tspan x="40" y="30">CUSTOM TRUCK DECALS</tspan>
+        </text>
+        <text font-family="Arial" font-size="8" font-weight="bold" fill="#CCCCCC">
+            <tspan x="75" y="185">LIMITED EDITION</tspan>
+        </text>
+    </g>
+</svg>

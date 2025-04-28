@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Truck Parts</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#222222" x="0" y="0" width="200" height="200" rx="8"></rect>
+        
+        <!-- Truck Wheel -->
+        <circle cx="70" cy="70" r="40" stroke="#333333" stroke-width="3" fill="#444444"></circle>
+        <circle cx="70" cy="70" r="35" stroke="#555555" stroke-width="2" fill="none"></circle>
+        <circle cx="70" cy="70" r="20" stroke="#666666" stroke-width="2" fill="#777777"></circle>
+        <circle cx="70" cy="70" r="10" stroke="#888888" stroke-width="2" fill="#999999"></circle>
+        <circle cx="70" cy="70" r="5" stroke="#aaaaaa" stroke-width="1" fill="#cc0000"></circle>
+        
+        <!-- Chrome Exhaust -->
+        <rect x="130" y="45" width="40" height="15" rx="5" fill="#CCCCCC" stroke="#999999" stroke-width="2"></rect>
+        <rect x="130" y="60" width="15" height="30" rx="3" fill="#CCCCCC" stroke="#999999" stroke-width="2"></rect>
+        <rect x="155" y="60" width="15" height="30" rx="3" fill="#CCCCCC" stroke="#999999" stroke-width="2"></rect>
+        
+        <!-- Truck Grill -->
+        <rect x="40" y="140" width="120" height="40" rx="5" fill="#CCCCCC" stroke="#999999" stroke-width="2"></rect>
+        <rect x="45" y="145" width="10" height="30" rx="2" fill="#444444" stroke="#333333" stroke-width="1"></rect>
+        <rect x="60" y="145" width="10" height="30" rx="2" fill="#444444" stroke="#333333" stroke-width="1"></rect>
+        <rect x="75" y="145" width="10" height="30" rx="2" fill="#444444" stroke="#333333" stroke-width="1"></rect>
+        <rect x="90" y="145" width="10" height="30" rx="2" fill="#444444" stroke="#333333" stroke-width="1"></rect>
+        <rect x="105" y="145" width="10" height="30" rx="2" fill="#444444" stroke="#333333" stroke-width="1"></rect>
+        <rect x="120" y="145" width="10" height="30" rx="2" fill="#444444" stroke="#333333" stroke-width="1"></rect>
+        <rect x="135" y="145" width="10" height="30" rx="2" fill="#444444" stroke="#333333" stroke-width="1"></rect>
+        
+        <!-- Text -->
+        <text font-family="Arial" font-size="12" font-weight="bold" fill="#f5a623">
+            <tspan x="40" y="120">PREMIUM TRUCK PARTS</tspan>
+        </text>
+        <text font-family="Arial" font-size="10" font-weight="bold" fill="#FFFFFF">
+            <tspan x="55" y="25">COUNTS KUSTOMS</tspan>
+        </text>
+    </g>
+</svg>

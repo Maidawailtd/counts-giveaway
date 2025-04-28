@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Truck Tour</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#222222" x="0" y="0" width="200" height="200" rx="8"></rect>
+        
+        <!-- Shop Building -->
+        <rect x="20" y="60" width="160" height="80" fill="#444444" stroke="#333333" stroke-width="2"></rect>
+        <rect x="80" y="100" width="40" height="40" fill="#555555" stroke="#333333" stroke-width="2"></rect>
+        <rect x="90" y="110" width="20" height="30" fill="#CCCCCC" stroke="#333333"></rect>
+        <rect x="30" y="80" width="30" height="20" fill="#99CCFF" stroke="#333333"></rect>
+        <rect x="140" y="80" width="30" height="20" fill="#99CCFF" stroke="#333333"></rect>
+        
+        <!-- Sign -->
+        <rect x="50" y="40" width="100" height="20" fill="#cc0000" stroke="#990000" stroke-width="2"></rect>
+        <text font-family="Arial" font-size="12" font-weight="bold" fill="#FFFFFF">
+            <tspan x="55" y="55">COUNTS KUSTOMS</tspan>
+        </text>
+        
+        <!-- Truck -->
+        <path d="M30,160 L40,150 L70,150 L80,160 L100,160 L100,180 L30,180 Z" fill="#cc0000" stroke="#000000" stroke-width="2"></path>
+        <circle cx="45" cy="180" r="8" fill="#333333" stroke="#000000" stroke-width="1"></circle>
+        <circle cx="45" cy="180" r="4" fill="#666666"></circle>
+        <circle cx="85" cy="180" r="8" fill="#333333" stroke="#000000" stroke-width="1"></circle>
+        <circle cx="85" cy="180" r="4" fill="#666666"></circle>
+        
+        <!-- Person -->
+        <circle cx="130" cy="170" r="10" fill="#FFD700" stroke="#000000"></circle>
+        <rect x="128" y="180" width="4" height="15" fill="#0066CC" stroke="#000000"></rect>
+        <rect x="125" y="185" width="10" height="5" fill="#0066CC" stroke="#000000"></rect>
+        
+        <!-- Text -->
+        <text font-family="Arial" font-size="14" font-weight="bold" fill="#f5a623">
+            <tspan x="40" y="30">EXCLUSIVE TOUR</tspan>
+        </text>
+        <text font-family="Arial" font-size="10" font-weight="bold" fill="#FFFFFF">
+            <tspan x="120" y="175">DANNY</tspan>
+        </text>
+    </g>
+</svg>

@@ -116,12 +116,12 @@ export class MemStorage implements IStorage {
   private initializePrizes() {
     // Legendary prizes
     this.createPrize({
-      name: "Custom Car NFT",
-      description: "A limited edition Counts Kustoms car NFT",
-      type: PrizeType.NFT,
+      name: "Custom Truck Build",
+      description: "A custom truck build consultation with the Counts Kustoms team",
+      type: PrizeType.EXPERIENCE,
       tier: PrizeTier.LEGENDARY,
-      image: "/src/assets/svg/ck-nft.svg",
-      value: "~$1000",
+      image: "/src/assets/images/prizes/custom-truck.svg",
+      value: "~$10,000",
     });
 
     this.createPrize({
@@ -135,7 +135,7 @@ export class MemStorage implements IStorage {
 
     this.createPrize({
       name: "Custom Paint Job",
-      description: "A custom paint job on your car by the Counts Kustoms team",
+      description: "A custom paint job on your truck by the Counts Kustoms team",
       type: PrizeType.EXPERIENCE,
       tier: PrizeTier.LEGENDARY,
       image: "/src/assets/svg/ck-experience.svg",
@@ -143,11 +143,11 @@ export class MemStorage implements IStorage {
     });
 
     this.createPrize({
-      name: "VIP Shop Tour",
-      description: "Private tour of Counts Kustoms shop with Danny",
+      name: "VIP Shop Tour with Danny",
+      description: "Private tour of Counts Kustoms shop with Danny Koker himself",
       type: PrizeType.TOUR,
       tier: PrizeTier.LEGENDARY,
-      image: "/src/assets/svg/ck-tour.svg",
+      image: "/src/assets/images/prizes/truck-tour.svg",
       value: "With Danny",
     });
 
@@ -171,12 +171,12 @@ export class MemStorage implements IStorage {
     });
 
     this.createPrize({
-      name: "Custom Rims",
-      description: "Set of custom rims for your car",
+      name: "Premium Truck Parts",
+      description: "Set of premium parts for your truck (exhaust, intake, lights)",
       type: PrizeType.CARPART,
       tier: PrizeTier.EPIC,
-      image: "/src/assets/svg/ck-carpart.svg",
-      value: "Custom Rims",
+      image: "/src/assets/images/prizes/truck-parts.svg",
+      value: "Premium Parts",
     });
 
     this.createPrize({
