@@ -60,7 +60,7 @@ export default function CountsHeader() {
   };
 
   return (
-    <header className="bg-black py-4 px-4 md:px-8 border-b border-[#cc0000]/20">
+    <header className="bg-counts-black py-4 px-4 md:px-8 border-b border-counts-red/30">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img 
@@ -68,23 +68,26 @@ export default function CountsHeader() {
             alt="Counts Kustoms" 
             className="h-12 md:h-16"
           />
-          <h1 className="text-xl md:text-2xl font-bold font-bebasNeue text-[#cc0000] ml-2">
-            GIVEAWAY
-          </h1>
+          <div className="ml-3 border-l-2 border-counts-red pl-3">
+            <h1 className="text-xl md:text-2xl font-bold font-bebasNeue text-counts-red">
+              GIVEAWAY
+            </h1>
+            <p className="text-xs text-counts-silver mt-0.5 font-bebasNeue">BY DANNY KOKER</p>
+          </div>
         </div>
         
         <div className="flex items-center gap-4">
           {user.isConnected ? (
             <>
               <div className="hidden md:flex flex-col items-end">
-                <span className="text-sm text-gray-300">Connected as</span>
-                <span className="font-semibold text-[#cc0000]">{user.username}</span>
+                <span className="text-sm text-counts-silver">Connected as</span>
+                <span className="font-semibold text-counts-red">{user.username}</span>
                 <span className="text-xs text-gray-400">
                   {formatWalletAddress(user.walletAddress || "")}
                 </span>
               </div>
               <Button 
-                variant="destructive" 
+                className="bg-counts-red hover:bg-counts-red/80 border-none" 
                 size="sm"
                 onClick={handleDisconnect}
               >
@@ -93,7 +96,7 @@ export default function CountsHeader() {
             </>
           ) : (
             <Button 
-              variant="destructive"
+              className="bg-counts-red hover:bg-counts-red/80 border-none"
               onClick={() => setIsConnectOpen(true)}
             >
               Connect
@@ -104,17 +107,17 @@ export default function CountsHeader() {
 
       {/* Connect Dialog */}
       <Dialog open={isConnectOpen} onOpenChange={setIsConnectOpen}>
-        <DialogContent className="sm:max-w-md bg-black border border-[#cc0000]/20">
+        <DialogContent className="sm:max-w-md bg-counts-black border border-counts-red/30">
           <DialogHeader>
-            <DialogTitle className="text-xl font-bebasNeue text-[#cc0000]">CONNECT TO GIVEAWAY</DialogTitle>
-            <DialogDescription>
+            <DialogTitle className="text-xl font-bebasNeue text-counts-red">CONNECT TO GIVEAWAY</DialogTitle>
+            <DialogDescription className="text-counts-silver">
               Enter a username to participate in the Counts Kustoms giveaway
             </DialogDescription>
           </DialogHeader>
           
           <div className="space-y-4 py-4">
             <div className="space-y-2">
-              <label htmlFor="username" className="text-sm font-medium">
+              <label htmlFor="username" className="text-sm font-medium text-counts-silver">
                 Username
               </label>
               <Input
@@ -122,13 +125,14 @@ export default function CountsHeader() {
                 placeholder="Enter your username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="bg-zinc-900 border-zinc-700"
+                className="bg-counts-grey border-counts-red/30 text-white"
               />
             </div>
           </div>
           
           <DialogFooter>
             <Button
+              className="border-counts-red/50 text-counts-silver hover:bg-counts-grey"
               variant="outline"
               onClick={() => setIsConnectOpen(false)}
               disabled={isConnecting}
@@ -136,7 +140,7 @@ export default function CountsHeader() {
               Cancel
             </Button>
             <Button 
-              variant="destructive"
+              className="bg-counts-red hover:bg-counts-red/80 border-none"
               onClick={handleConnect}
               disabled={isConnecting}
             >

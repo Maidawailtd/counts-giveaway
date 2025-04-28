@@ -26,13 +26,14 @@
   --ring: 20 14.3% 4.1%;
   --radius: 0.5rem;
   
-  /* Counts Kustoms colors */
-  --counts-red: 0 80% 40%;
-  --counts-black: 0 0% 10%;
-  --counts-silver: 0 0% 75%;
-  --counts-gold: 45 100% 47%;
-  --counts-blue: 210 100% 50%;
-  --counts-bg: 0 0% 15%;
+  /* Counts Kustoms colors - based on countskustoms.com */
+  --counts-red: 0 85% 35%;
+  --counts-black: 0 0% 7%;
+  --counts-silver: 0 0% 85%;
+  --counts-gold: 39 100% 50%;
+  --counts-blue: 215 100% 65%;
+  --counts-grey: 0 0% 20%;
+  --counts-bg: 0 0% 10%;
 }
 
 .dark {
@@ -141,6 +142,10 @@
     background-color: hsl(var(--counts-blue));
   }
   
+  .bg-counts-grey {
+    background-color: hsl(var(--counts-grey));
+  }
+  
   .text-counts-red {
     color: hsl(var(--counts-red));
   }
@@ -159,6 +164,10 @@
   
   .text-counts-black {
     color: hsl(var(--counts-black));
+  }
+  
+  .text-counts-grey {
+    color: hsl(var(--counts-grey));
   }
   
   .border-counts-red {
