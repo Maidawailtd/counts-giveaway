@@ -4,7 +4,7 @@ import WinnersSection from "@/components/WinnersSection";
 import PrizeShowcase from "@/components/PrizeShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import CommunitySection from "@/components/CommunitySection";
-import CountsFooter from "@/components/CountsFooter";
+import PepeFooter from "@/components/PepeFooter";
 import BoxOpeningModal from "@/components/BoxOpeningModal";
 import { useGiveaway } from "@/context/GiveawayContext";
 
@@ -19,7 +19,7 @@ export default function Home() {
       <PrizeShowcase />
       <HowItWorks />
       <CommunitySection />
-      <CountsFooter />
+      <PepeFooter />
       
       {/* Box opening modal will show when a box is selected */}
       {selectedBox && <BoxOpeningModal />}
