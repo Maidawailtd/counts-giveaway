@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DDD" />
+      <stop offset="50%" stop-color="#FFF" />
+      <stop offset="100%" stop-color="#BBB" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="50" cy="50" r="48" fill="#1A1A1A" stroke="#CC0000" stroke-width="2" />
+  
+  <!-- Metal plate effect -->
+  <circle cx="50" cy="50" r="42" fill="url(#metalGradient)" opacity="0.2" />
+  
+  <!-- "CK" Letters -->
+  <text x="50" y="45" font-family="Bebas Neue" font-size="42" fill="#CC0000" text-anchor="middle" font-weight="bold">CK</text>
+  
+  <!-- Counts Kustoms text -->
+  <text x="50" y="65" font-family="Bebas Neue" font-size="12" fill="#FFFFFF" text-anchor="middle">COUNTS KUSTOMS</text>
+  
+  <!-- Car silhouette -->
+  <path d="M25,75 C25,70 35,70 50,70 C65,70 75,70 75,75 C75,80 65,80 50,80 C35,80 25,80 25,75 Z" fill="#CC0000" />
+  <path d="M30,70 L35,65 L65,65 L70,70" fill="none" stroke="#CC0000" stroke-width="2" />
+</svg>

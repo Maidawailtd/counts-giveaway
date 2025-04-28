@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap');
 
 :root {
   --background: 0 0% 100%;
@@ -26,12 +26,13 @@
   --ring: 20 14.3% 4.1%;
   --radius: 0.5rem;
   
-  /* Pepe colors */
-  --pepe-green: 108 48% 50%;
-  --pepe-gold: 50 100% 50%;
-  --pepe-red: 0 100% 70%;
-  --pepe-dark: 0 0% 18%;
-  --pepe-bg: 0 0% 10%;
+  /* Counts Kustoms colors */
+  --counts-red: 0 80% 40%;
+  --counts-black: 0 0% 10%;
+  --counts-silver: 0 0% 75%;
+  --counts-gold: 45 100% 47%;
+  --counts-blue: 210 100% 50%;
+  --counts-bg: 0 0% 15%;
 }
 
 .dark {
@@ -63,7 +64,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-pepeBg text-foreground;
+    @apply font-montserrat antialiased bg-counts-bg text-foreground;
   }
 }
 
@@ -104,52 +105,97 @@
 }
 
 @layer utilities {
-  .font-poppins {
-    font-family: 'Poppins', sans-serif;
+  .font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
   }
   
-  .font-inter {
-    font-family: 'Inter', sans-serif;
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
   }
   
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
   
+  .bg-counts-bg {
+    background-color: hsl(var(--counts-bg));
+  }
+  
+  .bg-counts-black {
+    background-color: hsl(var(--counts-black));
+  }
+  
+  .bg-counts-red {
+    background-color: hsl(var(--counts-red));
+  }
+  
+  .bg-counts-silver {
+    background-color: hsl(var(--counts-silver));
+  }
+  
+  .bg-counts-gold {
+    background-color: hsl(var(--counts-gold));
+  }
+  
+  .bg-counts-blue {
+    background-color: hsl(var(--counts-blue));
+  }
+  
+  .text-counts-red {
+    color: hsl(var(--counts-red));
+  }
+  
+  .text-counts-gold {
+    color: hsl(var(--counts-gold));
+  }
+  
+  .text-counts-silver {
+    color: hsl(var(--counts-silver));
+  }
+  
+  .text-counts-blue {
+    color: hsl(var(--counts-blue));
+  }
+  
+  .text-counts-black {
+    color: hsl(var(--counts-black));
+  }
+  
+  .border-counts-red {
+    border-color: hsl(var(--counts-red));
+  }
+  
+  .border-counts-gold {
+    border-color: hsl(var(--counts-gold));
+  }
+  
+  .border-counts-silver {
+    border-color: hsl(var(--counts-silver));
+  }
+  
+  /* For backward compatibility */
   .bg-pepeBg {
-    background-color: hsl(var(--pepe-bg));
+    background-color: hsl(var(--counts-bg));
   }
   
   .bg-pepeDark {
-    background-color: hsl(var(--pepe-dark));
-  }
-  
-  .bg-pepeGreen {
-    background-color: hsl(var(--pepe-green));
-  }
-  
-  .bg-pepeGold {
-    background-color: hsl(var(--pepe-gold));
-  }
-  
-  .text-pepeGreen {
-    color: hsl(var(--pepe-green));
+    background-color: hsl(var(--counts-black));
   }
   
   .text-pepeGold {
-    color: hsl(var(--pepe-gold));
+    color: hsl(var(--counts-gold));
+  }
+  
+  .text-pepeGreen {
+    color: hsl(var(--counts-red));
   }
   
   .text-pepeDark {
-    color: hsl(var(--pepe-dark));
+    color: hsl(var(--counts-black));
   }
   
-  .border-pepeGreen {
-    border-color: hsl(var(--pepe-green));
-  }
-  
-  .border-pepeGold {
-    border-color: hsl(var(--pepe-gold));
+  .font-poppins {
+    font-family: 'Bebas Neue', sans-serif;
   }
 }
 

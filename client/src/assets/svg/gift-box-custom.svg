@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="customGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222" />
+      <stop offset="100%" stop-color="#444444" />
+    </linearGradient>
+    <pattern id="carbonPattern" patternUnits="userSpaceOnUse" width="10" height="10">
+      <rect width="10" height="10" fill="#333333"/>
+      <path d="M0,0 L10,10 M10,0 L0,10" stroke="#444444" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Box base -->
+  <rect x="15" y="40" width="70" height="55" rx="5" fill="url(#customGradient)" />
+  
+  <!-- Carbon fiber pattern overlay -->
+  <rect x="15" y="40" width="70" height="55" rx="5" fill="url(#carbonPattern)" opacity="0.3" />
+  
+  <!-- Box lid -->
+  <rect x="10" y="30" width="80" height="15" rx="3" fill="#333333" />
+  
+  <!-- Pinstripe detail -->
+  <path d="M15,50 L85,50" stroke="#CC0000" stroke-width="1" />
+  <path d="M15,55 L85,55" stroke="#CC0000" stroke-width="1" />
+  
+  <!-- Ribbon vertical -->
+  <rect x="45" y="5" width="10" height="90" fill="#CC0000" />
+  
+  <!-- Ribbon horizontal -->
+  <rect x="15" y="40" width="70" height="10" fill="#CC0000" />
+  
+  <!-- Ribbon bow left -->
+  <path d="M45,15 Q35,5 30,15 Q25,25 35,25 Q45,25 45,15" fill="#CC0000" />
+  
+  <!-- Ribbon bow right -->
+  <path d="M55,15 Q65,5 70,15 Q75,25 65,25 Q55,25 55,15" fill="#CC0000" />
+  
+  <!-- CK symbol -->
+  <text x="50" y="75" font-family="Arial" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">CK</text>
+</svg>
