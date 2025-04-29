@@ -74,8 +74,8 @@ export default function CommunitySection() {
                     type="tel" 
                     placeholder="Phone Number" 
                     className="px-4 py-3 rounded-lg bg-pepeDark border border-gray-700 focus:border-pepeGreen outline-none transition-colors duration-200"
-                    pattern="[0-9]{10,}"
-                    title="Please enter a valid phone number (minimum 10 digits)"
+                    pattern="^\+?[1-9][0-9]{7,14}$"
+                    title="Please enter a valid international phone number"
                     required
                     aria-label="Phone number"
                   />

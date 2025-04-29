@@ -3,6 +3,21 @@ import { useGiveaway } from "@/context/GiveawayContext";
 import { cn } from "@/lib/utils";
 
 export default function PrizeShowcase() {
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    // Simulate loading delay
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-[200px]">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-pepeGold"></div>
+      </div>
+    );
+  }
   const { legendaryPrizes, epicPrizes, rarePrizes, isLoading } = useGiveaway();
 
   if (isLoading) {
