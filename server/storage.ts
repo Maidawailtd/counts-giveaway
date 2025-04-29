@@ -65,6 +65,7 @@ export class MemStorage implements IStorage {
       description: "Cash & NFT Prizes",
       image: "/src/assets/svg/gift-box-gold.svg",
       isPremium: true,
+      price: "99.99"
     });
 
     // Silver box
@@ -74,6 +75,7 @@ export class MemStorage implements IStorage {
       description: "Cash & Merchandise",
       image: "/src/assets/svg/gift-box-silver.svg",
       isPremium: false,
+      price: "49.99"
     });
 
     // Bronze box

@@ -54,11 +54,9 @@ export default function GiftBox({ giftBox, onClick }: GiftBoxProps) {
         <p className="text-xs mt-1 text-pepeDark">{giftBox.description}</p>
       </div>
 
-      {giftBox.isPremium && (
-        <div className="absolute -top-2 -right-2 bg-pepeGold text-pepeDark text-xs font-bold py-1 px-2 rounded-full">
-          Premium
-        </div>
-      )}
+      <div className="absolute -top-2 -right-2 bg-pepeGold text-pepeDark text-xs font-bold py-1 px-2 rounded-full">
+        ${giftBox.price}
+      </div>
     </div>
   );
 }

@@ -43,6 +43,7 @@ export const giftBoxes = pgTable("gift_boxes", {
   description: text("description").notNull(),
   image: text("image").notNull(),
   isPremium: boolean("is_premium").default(false),
+  price: text("price").notNull(),
 });
 
 export const insertGiftBoxSchema = createInsertSchema(giftBoxes).pick({
