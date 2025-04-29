@@ -106,13 +106,20 @@ export default function BoxOpeningModal() {
           </div>
           
           {!winResult.isRevealed && (
-            <Button 
-              className="bg-pepeGold hover:bg-opacity-80 px-6 py-3 rounded-lg font-poppins font-bold text-pepeDark transition-all transform hover:scale-105 mb-4 w-full"
-              onClick={handleOpenBox}
-              disabled={isOpeningBox}
-            >
-              {isOpeningBox ? "Opening..." : "Open Box"}
-            </Button>
+            <>
+              {selectedBox.isPremium && (
+                <p className="text-sm text-gray-400 mb-2">
+                  This is a premium box. Payment required to open.
+                </p>
+              )}
+              <Button 
+                className="bg-pepeGold hover:bg-opacity-80 px-6 py-3 rounded-lg font-poppins font-bold text-pepeDark transition-all transform hover:scale-105 mb-4 w-full"
+                onClick={handleOpenBox}
+                disabled={isOpeningBox}
+              >
+                {isOpeningBox ? "Opening..." : selectedBox.isPremium ? `Pay to Open (${selectedBox.type === 'GOLD' ? '0.1 ETH' : '0.05 ETH'})` : "Open Box"}
+              </Button>
+            </>
           )}
           
           {winResult.isRevealed && (

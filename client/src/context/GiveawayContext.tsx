@@ -174,6 +174,23 @@ export function GiveawayProvider({ children }: { children: ReactNode }) {
   };
 
   const selectBox = (box: GiftBox) => {
+    if (!user.isConnected) {
+      toast({
+        title: "Connect Wallet",
+        description: "Please connect your wallet first",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // Check if payment is required
+    if (box.isPremium) {
+      const price = box.type === 'GOLD' ? '0.1 ETH' : '0.05 ETH';
+      if (!window.confirm(`This box costs ${price}. Would you like to proceed with payment?`)) {
+        return;
+      }
+    }
+    
     setSelectedBox(box);
     setWinResult({ prize: null, isRevealed: false });
   };
