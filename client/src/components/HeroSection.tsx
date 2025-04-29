@@ -51,10 +51,11 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
             <Button 
-              className="bg-counts-gold hover:bg-counts-gold/80 px-6 py-6 rounded-lg font-bebasNeue font-bold text-counts-black transition-all transform hover:scale-105 shadow-lg h-12"
+              className="bg-counts-gold hover:bg-counts-gold/80 px-6 py-6 rounded-lg font-bebasNeue font-bold text-counts-black transition-all transform hover:scale-105 shadow-lg h-12 focus:ring-2 focus:ring-offset-2 focus:ring-counts-gold"
               onClick={() => handleScrollToSection("giftBoxes")}
+              aria-label="Participate in giveaway"
             >
-              <Gift className="mr-2 h-5 w-5" /> Participate Now
+              <Gift className="mr-2 h-5 w-5" aria-hidden="true" /> Participate Now
             </Button>
             <Button 
               className="bg-counts-red hover:bg-counts-red/80 px-6 py-6 rounded-lg font-bebasNeue font-bold text-white transition-all transform hover:scale-105 shadow-lg h-12"

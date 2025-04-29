@@ -65,10 +65,13 @@ export default function CommunitySection() {
                 <Input 
                   type="email" 
                   placeholder="Your email address" 
-                  className="flex-grow px-4 py-3 rounded-lg bg-pepeDark border border-gray-700 focus:border-pepeGreen outline-none"
+                  className="flex-grow px-4 py-3 rounded-lg bg-pepeDark border border-gray-700 focus:border-pepeGreen outline-none transition-colors duration-200"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Please enter a valid email address"
                   required
+                  aria-label="Email subscription"
                 />
                 <Button 
                   type="submit" 

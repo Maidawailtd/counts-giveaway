@@ -20,7 +20,7 @@ export default function PrizeShowcase() {
     return (
       <div className="grid grid-cols-2 gap-4">
         {prizes.map((prize, index) => (
-          <div key={index} className="bg-pepeDark/50 rounded-lg p-3 text-center">
+          <div key={index} className="bg-pepeDark/50 rounded-lg p-3 text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:bg-pepeDark/70">
             {prize.type === "TOKEN" ? (
               <div className="w-full h-32 bg-gradient-to-br from-pepeGreen to-pepeGold rounded-md mb-2 flex items-center justify-center">
                 <span className="text-3xl">💰</span>
