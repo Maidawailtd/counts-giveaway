@@ -61,11 +61,29 @@ export default function CommunitySection() {
             <CardContent className="p-0">
               <h3 className="font-poppins font-bold text-xl mb-4 text-pepeGold">Subscribe for Exclusive Drops</h3>
               <p className="text-gray-300 mb-6">Get notified about new giveaways and receive bonus entries!</p>
-              <form className="flex flex-col md:flex-row gap-4 max-w-xl mx-auto" onSubmit={handleSubscribe}>
+              <form className="flex flex-col gap-4 max-w-xl mx-auto" onSubmit={handleSubscribe}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Input 
+                    type="text" 
+                    placeholder="Full Name" 
+                    className="px-4 py-3 rounded-lg bg-pepeDark border border-gray-700 focus:border-pepeGreen outline-none transition-colors duration-200"
+                    required
+                    aria-label="Full name"
+                  />
+                  <Input 
+                    type="tel" 
+                    placeholder="Phone Number" 
+                    className="px-4 py-3 rounded-lg bg-pepeDark border border-gray-700 focus:border-pepeGreen outline-none transition-colors duration-200"
+                    pattern="[0-9]{10,}"
+                    title="Please enter a valid phone number (minimum 10 digits)"
+                    required
+                    aria-label="Phone number"
+                  />
+                </div>
                 <Input 
                   type="email" 
                   placeholder="Your email address" 
-                  className="flex-grow px-4 py-3 rounded-lg bg-pepeDark border border-gray-700 focus:border-pepeGreen outline-none transition-colors duration-200"
+                  className="px-4 py-3 rounded-lg bg-pepeDark border border-gray-700 focus:border-pepeGreen outline-none transition-colors duration-200"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -75,7 +93,7 @@ export default function CommunitySection() {
                 />
                 <Button 
                   type="submit" 
-                  className="bg-pepeGreen hover:bg-opacity-80 px-6 py-3 rounded-lg font-poppins font-semibold transition-all"
+                  className="bg-pepeGreen hover:bg-opacity-80 px-6 py-3 rounded-lg font-poppins font-semibold transition-all w-full md:w-auto"
                 >
                   Subscribe
                 </Button>
