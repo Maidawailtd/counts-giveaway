@@ -22,11 +22,13 @@ export default function PepeHeader() {
     <header className="bg-pepeDark py-4 px-4 md:px-8 lg:px-12">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
-          <img 
-            src="/src/assets/svg/pepe-logo.svg" 
-            alt="Pepe Millonario Logo" 
-            className="w-12 h-12 rounded-full mr-3 animate-float" 
-          />
+          <a href="/" className="hover:opacity-80 transition-opacity">
+            <img 
+              src="/src/assets/svg/pepe-logo.svg" 
+              alt="Pepe Millonario Logo" 
+              className="w-12 h-12 rounded-full mr-3 animate-float" 
+            />
+          </a>
           <h1 className="font-poppins font-bold text-2xl md:text-3xl text-pepeGold">
             Pepe <span className="text-pepeGreen">Millonario</span>
           </h1>

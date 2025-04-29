@@ -19,7 +19,7 @@ export default function CountsHeader() {
   const [isConnectOpen, setIsConnectOpen] = useState(false);
   const [username, setUsername] = useState("");
   const [isConnecting, setIsConnecting] = useState(false);
-  
+
   const { user, connectWallet, disconnectWallet } = useGiveaway();
   const { toast } = useToast();
 
@@ -63,13 +63,15 @@ export default function CountsHeader() {
   return (
     <header className="bg-counts-black py-4 px-4 md:px-8 border-b border-counts-red/30">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex flex-col items-center md:flex-row">
+        <div className="flex flex-col md:flex-row">
           <div className="flex flex-col items-center md:items-start">
-            <img 
-              src={countsMainLogoSrc} 
-              alt="Counts Kustoms" 
-              className="h-16 md:h-20 mb-2 md:mb-0"
-            />
+            <a href="/" className="hover:opacity-80 transition-opacity">
+              <img 
+                src={countsMainLogoSrc} 
+                alt="Counts Kustoms" 
+                className="h-16 md:h-20 mb-2 md:mb-0"
+              />
+            </a>
             <img 
               src={countsFlameLogoSrc} 
               alt="Counts Kustoms Flames" 
@@ -89,7 +91,7 @@ export default function CountsHeader() {
             <a href="#community" className="text-counts-silver hover:text-counts-gold transition-colors">Community</a>
           </nav>
         </div>
-        
+
         <div className="flex items-center gap-4">
           {user.isConnected ? (
             <>
@@ -128,7 +130,7 @@ export default function CountsHeader() {
               Enter a username to participate in the Counts Kustoms giveaway
             </DialogDescription>
           </DialogHeader>
-          
+
           <div className="space-y-4 py-4">
             <div className="space-y-2">
               <label htmlFor="username" className="text-sm font-medium text-counts-silver">
@@ -143,7 +145,7 @@ export default function CountsHeader() {
               />
             </div>
           </div>
-          
+
           <DialogFooter>
             <Button
               className="border-counts-red/50 text-counts-silver hover:bg-counts-grey"
