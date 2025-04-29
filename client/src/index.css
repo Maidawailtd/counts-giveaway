@@ -5,6 +5,24 @@
 @tailwind utilities;
 
 :root {
+  --counts-gold: #C4A747;
+  --counts-red: #8B0000;
+  --counts-black: #121212;
+}
+
+.bg-counts-gold { background-color: var(--counts-gold); }
+.bg-counts-red { background-color: var(--counts-red); }
+.bg-counts-black { background-color: var(--counts-black); }
+.text-counts-gold { color: var(--counts-gold); }
+.text-counts-red { color: var(--counts-red); }
+.border-counts-gold { border-color: var(--counts-gold); }
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+}
+
+:root {
   --background: 0 0% 100%;
   --foreground: 20 14.3% 4.1%;
   --muted: 60 4.8% 95.9%;
